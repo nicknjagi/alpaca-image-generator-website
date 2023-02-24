@@ -4,13 +4,15 @@ This is an open source project from [DevProjects](http://www.codementor.io/proje
 Find the project requirements here: [Alpaca image generator website](https://www.codementor.io/projects/web/alpaca-image-generator-website-ce2oc0eus8)
 
 ## Tech/framework used
-Built with ___
+Built with HTML CSS & JavaScript
 
 ## Screenshots and demo
-Screenshots of your app and/or a link to your live demo
+![](./screenshot.png)
 
-## Installation
-Instructions for other developers on how to install and run your code on their local environment.
+## Links
+
+- Solution URL: [GitHub repo](https://github.com/nicknjagi/alpaca-image-generator-website)
+- Live Site URL: [https://nicknjagi.github.io/alpaca-image-generator-website/](https://nicknjagi.github.io/alpaca-image-generator-website/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
