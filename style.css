@@ -38,47 +38,47 @@ main{
     height: 320px;
     min-width: 336px;
     margin-bottom:1.5rem ;
-    background-color: #002259;
+    background-image:url('./alpaca/backgrounds/darkblue70.png');
 }
 .img img{
     position: absolute;
     width: 300px;
 }
-.ears{
+.ears-img{
     top: 18px;
     left: 33px;
 }
-.accessories{
+.accessories-img{
     top: 19px;
     left: 35px;
     z-index: 1;
 }
-.img .hair{
+.hair-img{
     top: 19px;
     left: 22px;
     z-index: 1;
 }
-.nose{
+.nose-img{
     top: 17px;
     left: 40px;
     z-index: 1;
 }
-.eyes{
+.eyes-img{
     top: 19px;
     left: 38px;
     z-index: 2;
 }
-.mouth{
+.mouth-img{
     top: 17px;
     left: 37px;
     z-index: 2;
 }
-.neck{
+.neck-img{
     bottom: 0;
     left: 38px;
     z-index: 0;
 }
-.leg{
+.leg-img{
     bottom: 0;
     left: 35px;
 }
@@ -117,7 +117,12 @@ h3{
     color: inherit;
     font-size: inherit;
 }
-.btns-container button:hover , button:focus{
+.btns-container button.active{
+    color: #fff;
+    background-color: var(--primary-color);
+    border: 2px solid transparent;
+}
+.btns-container button:hover , button:focus, button:active{
     color: #fff;
     background-color: var(--primary-color);
     border: 2px solid transparent;
