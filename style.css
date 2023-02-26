@@ -15,7 +15,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
     display: flex;
-    padding: 2rem 0.75rem;
+    padding-inline: .75rem;
     background-color: var(--bg-color);
 }
 h1,h3{
@@ -31,7 +31,7 @@ main{
 .container {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
 }
 .img{
     position: relative;
@@ -135,7 +135,11 @@ h3{
 }
 
 @media screen and (min-width:768px) {
+    body {
+        padding: 2rem;
+    }
     .container{
         flex-direction: row;
+        gap: 5rem;
     }
 }
