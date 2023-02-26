@@ -36,7 +36,8 @@ main{
 .img{
     position: relative;
     height: 320px;
-    min-width: 336px;
+    width: auto;
+    min-width: 340px;
     margin-bottom:1.5rem ;
     background-image:url('./alpaca/backgrounds/darkblue70.png');
 }
@@ -92,7 +93,7 @@ main{
     padding: 0.75rem 0;
     background-color: #fff;
     color: var(--heading-color);
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     font-size: inherit;
     font-weight: bold;
