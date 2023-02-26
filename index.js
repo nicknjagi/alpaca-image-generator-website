@@ -21,176 +21,163 @@ const image = document.getElementById('image')
 const accessoriesBtn = document.querySelector('.accessories-btns')
 const styleBtns = document.querySelector('.style-btns')
 
-const styles = [
+const hair = [
     {
-        hair: [
-            {
-                text: "Default",
-                src: "./alpaca/hair/default.png"
-            },
-            {
-                text: "Bang",
-                src: "./alpaca/hair/bang.png"
-            },
-            {
-                text: "Curls",
-                src: "./alpaca/hair/curls.png"
-            },
-            {
-                text: "Elegant",
-                src: "./alpaca/hair/elegant.png"
-            },
-            {
-                text: "Fancy",
-                src: "./alpaca/hair/fancy.png"
-            },
-            {
-                text: "Quiff",
-                src: "./alpaca/hair/quiff.png"
-            },
-            {
-                text: "Short",
-                src: "./alpaca/hair/short.png"
-            }
-        ]
+        text: "Default",
+        src: "./alpaca/hair/default.png"
     },
     {
-        ears: [
-            {
-                text: "Default",
-                src: "./alpaca/ears/default.png"
-            }, 
-            {
-                text: "Tilt-backward",
-                src: "./alpaca/ears/tilt-backward.png"
-            },
-            {
-                text: "Tilt-forward",
-                src: "./alpaca/ears/tilt-forward.png"
-            }]
+        text: "Bang",
+        src: "./alpaca/hair/bang.png"
     },
     {
-        accessories : [
-            {
-                text: "Headphone",
-                src: "./alpaca/accessories/headphone.png"
-            },
-            {
-                text: "Earings",
-                src: "./alpaca/accessories/earings.png"
-            },
-            {
-                text: "Flower",
-                src: "./alpaca/accessories/flower.png"
-            },
-            {
-                text: "Glasses",
-                src: "./alpaca/accessories/glasses.png"
-            }
-        ]
+        text: "Curls",
+        src: "./alpaca/hair/curls.png"
     },
     {
-        eyes: [
-            {
-                text: "Default",
-                src: "./alpaca/eyes/default.png"
-            },
-            {
-                text: "Angry",
-                src: "./alpaca/eyes/angry.png"
-            },
-            {
-                text: "Naughty",
-                src: "./alpaca/eyes/naughty.png"
-            },
-            {
-                text: "Panda",
-                src: "./alpaca/eyes/panda.png"
-            },
-            {
-                text: "Smart",
-                src: "./alpaca/eyes/smart.png"
-            },
-            {
-                text: "Star",
-                src: "./alpaca/eyes/star.png"
-            }
-        ]
+        text: "Elegant",
+        src: "./alpaca/hair/elegant.png"
     },
     {
-        mouth: [
-            {
-                text: "Default",
-                src: "./alpaca/mouth/default.png"
-            },
-            {
-                text: "Astonished",
-                src: "./alpaca/mouth/astonished.png"
-            },
-            {
-                text: "Eating",
-                src: "./alpaca/mouth/eating.png"
-            },
-            {
-                text: "Laugh",
-                src: "./alpaca/mouth/laugh.png"
-            },
-            {
-                text: "Tongue",
-                src: "./alpaca/mouth/tongue.png"
-            }
-        ]
+        text: "Fancy",
+        src: "./alpaca/hair/fancy.png"
     },
     {
-        neck: [
-            {
-                text: "Default",
-                src: "./alpaca/neck/default.png"
-            },
-            {
-                text: "Bend-backward",
-                src: "./alpaca/neck/bend-backward.png"
-            },
-            {
-                text: "Bend-forward",
-                src: "./alpaca/neck/bend-forward.png"
-            },
-            {
-                text: "Thick",
-                src: "./alpaca/neck/thick.png"
-            },
-        ]
+        text: "Quiff",
+        src: "./alpaca/hair/quiff.png"
     },
     {
-        leg: [
-            {
-                text: "Default",
-                src: "./alpaca/leg/default.png"
-            },
-            {
-                text: "Bubble-tea",
-                src: "./alpaca/leg/bubble-tea.png"
-            },
-            {
-                text: "Cookie",
-                src: "./alpaca/leg/cookie.png"
-            },
-            {
-                text: "Game-console",
-                src: "./alpaca/leg/game-console.png"
-            },
-            {
-                text: "Tilt-backward",
-                src: "./alpaca/leg/tilt-backward.png"
-            },
-            {
-                text: "Tilt-forward",
-                src: "./alpaca/leg/tilt-forward.png"
-            },
-        ]
+        text: "Short",
+        src: "./alpaca/hair/short.png"
     }
 ]
-
+const ears = [
+    {
+        text: "Default",
+        src: "./alpaca/ears/default.png",
+        element:'earEl'
+    }, 
+    {
+        text: "Tilt-backward",
+        src: "./alpaca/ears/tilt-backward.png",
+        element:'earEl'
+    },
+    {
+        text: "Tilt-forward",
+        src: "./alpaca/ears/tilt-forward.png",
+        element:'earEl'
+    }
+]
+const accessories = [
+    {
+        text: "Headphone",
+        src: "./alpaca/accessories/headphone.png"
+    },
+    {
+        text: "Earings",
+        src: "./alpaca/accessories/earings.png"
+    },
+    {
+        text: "Flower",
+        src: "./alpaca/accessories/flower.png"
+    },
+    {
+        text: "Glasses",
+        src: "./alpaca/accessories/glasses.png"
+    }
+]
+const eyes = [
+    {
+        text: "Default",
+        src: "./alpaca/eyes/default.png"
+    },
+    {
+        text: "Angry",
+        src: "./alpaca/eyes/angry.png"
+    },
+    {
+        text: "Naughty",
+        src: "./alpaca/eyes/naughty.png"
+    },
+    {
+        text: "Panda",
+        src: "./alpaca/eyes/panda.png"
+    },
+    {
+        text: "Smart",
+        src: "./alpaca/eyes/smart.png"
+    },
+    {
+        text: "Star",
+        src: "./alpaca/eyes/star.png"
+    }
+]
+const mouth = [
+    {
+        text: "Default",
+        src: "./alpaca/mouth/default.png"
+    },
+    {
+        text: "Astonished",
+        src: "./alpaca/mouth/astonished.png"
+    },
+    {
+        text: "Eating",
+        src: "./alpaca/mouth/eating.png"
+    },
+    {
+        text: "Laugh",
+        src: "./alpaca/mouth/laugh.png"
+    },
+    {
+        text: "Tongue",
+        src: "./alpaca/mouth/tongue.png"
+    }
+]
+const neck = [
+    {
+        text: "Default",
+        src: "./alpaca/neck/default.png"
+    },
+    {
+        text: "Bend-backward",
+        src: "./alpaca/neck/bend-backward.png"
+    },
+    {
+        text: "Bend-forward",
+        src: "./alpaca/neck/bend-forward.png"
+    },
+    {
+        text: "Thick",
+        src: "./alpaca/neck/thick.png"
+    },
+]
+const leg = [
+    {
+        text: "Default",
+        src: "./alpaca/leg/default.png"
+    },
+    {
+        text: "Bubble-tea",
+        src: "./alpaca/leg/bubble-tea.png"
+    },
+    {
+        text: "Cookie",
+        src: "./alpaca/leg/cookie.png"
+    },
+    {
+        text: "Game-console",
+        src: "./alpaca/leg/game-console.png"
+    },
+    {
+        text: "Tilt-backward",
+        src: "./alpaca/leg/tilt-backward.png"
+    },
+    {
+        text: "Tilt-forward",
+        src: "./alpaca/leg/tilt-forward.png"
+    },
+]
 const background = [
     {
         text: "Blue 50",
@@ -265,16 +252,23 @@ const background = [
         src: './alpaca/backgrounds/yellow70.png'
     }
 ]
-
-function generateBtns(id,accessory){
-    const accessories = styles[id][accessory]
+function generateButtons(accessory){
     const buttons = []
+    const len = accessory.length
 
-    for (let i = 0; i < accessories.length; i++){
-        const btn = `
-            <button onclick="updateImage( ${accessory}Img, '${accessories[i].src}')">${accessories[i].text}</button>
+    for (let i = 0; i < len; i++){
+        if (accessory != background){
+            const btn = `
+            <button onclick="updateImage('${accessory[i].src}')">${accessory[i].text}</button>
         `
-        buttons.push(btn)
+            buttons.push(btn)
+        }
+        else {        
+            const btn = `
+            <button onclick="updateBg('${accessory[i].src}')">${accessory[i].text}</button>
+        `
+            buttons.push(btn)
+        }
     }
     // remove existing buttons
     styleBtns.innerHTML=''
@@ -285,28 +279,28 @@ function generateBtns(id,accessory){
     })
 }
 
-// generate background buttons
-function generateBgBtns(){
-    const buttons = [];
-    const len = background.length;
-
-    for (let i = 0; i < len; i++){
-        const btn = `
-            <button onclick="updateBg('${background[i].src}')">${background[i].text}</button>
-        `
-        buttons.push(btn)
+function updateImage(imgSrc){
+    if (imgSrc.includes("hair")){
+        hairImg.src = imgSrc
     }
-     // remove existing buttons
-    styleBtns.innerHTML=''
-
-    // add new buttons
-    buttons.forEach(btn=>{
-        styleBtns.innerHTML += btn
-    })
-}
-
-function updateImage(accessory,imgSrc){
-    accessory.src = imgSrc
+    if (imgSrc.includes("ear") && imgSrc.includes('earings') === false){
+        earsImg.src = imgSrc
+    }
+    if (imgSrc.includes("eye")){
+        eyesImg.src = imgSrc
+    }
+    if (imgSrc.includes("mouth")){
+        mouthImg.src = imgSrc
+    }
+    if (imgSrc.includes("accessories")){
+        accessoriesImg.src = imgSrc
+    }
+    if (imgSrc.includes("neck")){
+        neckImg.src = imgSrc
+    }
+    if (imgSrc.includes("leg")){
+        legImg.src = imgSrc
+    }
 }
 
 function updateBg(bgSrc){
@@ -321,24 +315,14 @@ function removeActive(){
 }
 
 function randomAccessories(){
-    const hairImgSrc = styles[0]["hair"][Math.floor(Math.random()*7)].src
-    const earsImgSrc = styles[1]["ears"][Math.floor(Math.random()*3)].src
-    const accessoriesImgSrc = styles[2]["accessories"][Math.floor(Math.random()*4)].src
-    const eyesImgSrc = styles[3]["eyes"][Math.floor(Math.random()*6)].src
-    const mouthImgSrc = styles[4]["mouth"][Math.floor(Math.random()*5)].src
-    const neckImgSrc = styles[5]["neck"][Math.floor(Math.random()*4)].src
-    const legImgSrc = styles[6]["leg"][Math.floor(Math.random()*6)].src
-
-    updateImage(hairImg, hairImgSrc)
-    updateImage(earsImg, earsImgSrc)
-    updateImage(accessoriesImg, accessoriesImgSrc)
-    updateImage(eyesImg, eyesImgSrc)
-    updateImage(mouthImg, mouthImgSrc)
-    updateImage(neckImg, neckImgSrc)
-    updateImage(legImg, legImgSrc)
-
-    const bgSrc = background[Math.floor(Math.random()*18)].src
-    updateBg(bgSrc)
+    updateImage(hair[Math.floor(Math.random()* hair.length)].src)
+    updateImage(ears[Math.floor(Math.random()* ears.length)].src)
+    updateImage(accessories[Math.floor(Math.random()* accessories.length)].src)
+    updateImage(eyes[Math.floor(Math.random()* eyes.length)].src)
+    updateImage(mouth[Math.floor(Math.random()* mouth.length)].src)
+    updateImage(neck[Math.floor(Math.random()* neck.length)].src)
+    updateImage(leg[Math.floor(Math.random()* leg.length)].src)
+    updateBg(background[Math.floor(Math.random()* background.length)].src)
 }
 
 download.addEventListener('click', ()=>{
@@ -354,45 +338,49 @@ download.addEventListener('click', ()=>{
 });
 })
 
+window.addEventListener("DOMContentLoaded", ()=>{
+    generateButtons(hair)
+})
+
 hairEl.addEventListener('click', ()=>{
     removeActive();
     hairEl.classList.add('active')
-    generateBtns(0, "hair")
+    generateButtons(hair)
 })
 earEl.addEventListener('click', ()=>{
     removeActive();
     earEl.classList.add('active')
-    generateBtns(1, "ears")
+    generateButtons(ears)
 })
 accessoriesEl.addEventListener('click', ()=>{
     removeActive();
     accessoriesEl.classList.add('active')
-    generateBtns(2, "accessories")
+    generateButtons(accessories)
 })
 eyeEl.addEventListener('click', ()=>{
     removeActive();
     eyeEl.classList.add('active')
-    generateBtns(3, "eyes")
+    generateButtons(eyes)
 })
 mouthEl.addEventListener('click', ()=>{
     removeActive();
     mouthEl.classList.add('active')
-    generateBtns(4, "mouth")
+    generateButtons(mouth)
 })
 neckEl.addEventListener('click', ()=>{
     removeActive();
     neckEl.classList.add('active')
-    generateBtns(5, "neck")
+    generateButtons(neck)
 })
 legEl.addEventListener('click', ()=>{
     removeActive();
     legEl.classList.add('active')
-    generateBtns(6, "leg")
+    generateButtons(leg)
 })
 backgroundEl.addEventListener('click', ()=>{
     removeActive();
     backgroundEl.classList.add('active')
-    generateBgBtns()
+    generateButtons(background)
 })
 random.addEventListener('click',()=>{
     randomAccessories()
